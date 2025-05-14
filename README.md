@@ -59,4 +59,6 @@ The project can be run entirely using `docker-compose`, which sets up RabbitMQ, 
    docker-compose up --build
    ```
 3. Access the application at https://localhost:8082/swagger/index.html. Use Swagger to interact with the sales endpoints for creating, updating, querying, selecting, and deleting sales.
-4. Access MongoDB at http://localhost:27017 to check if the `sale events` are being stored by the consumers that are observing the RabbitMQ queues (using MassTransit).
+4. It is possible to see the RabbitMQ management interface at http://127.0.0.1:15672/#/ (with the username and password set in the docker-compose file).
+5. Access MongoDB at http://localhost:27017 to check if the `sale events` are being stored by consumers observing the RabbitMQ queues (using MassTransit).
+
