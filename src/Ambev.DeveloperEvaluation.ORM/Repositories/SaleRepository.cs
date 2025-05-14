@@ -1,7 +1,6 @@
 ﻿using Ambev.DeveloperEvaluation.Domain.Entities;
 using Ambev.DeveloperEvaluation.Domain.Enums;
 using Ambev.DeveloperEvaluation.Domain.Repositories;
-
 using Ambev.DeveloperEvaluation.Shared.Utils;
 using Microsoft.EntityFrameworkCore;
 

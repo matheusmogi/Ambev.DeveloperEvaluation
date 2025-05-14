@@ -7,7 +7,7 @@ public abstract class BaseSaleConsumer
 {
     private readonly ISaleRepository _saleRepository;
 
-    public BaseSaleConsumer(ISaleRepository saleRepository)
+    protected BaseSaleConsumer(ISaleRepository saleRepository)
     {
         _saleRepository = saleRepository;
     }

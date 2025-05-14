@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Ambev.DeveloperEvaluation.Shared\Ambev.DeveloperEvaluation.Shared.csproj" />
     <ProjectReference Include="..\Ambev.DeveloperEvaluation.Domain\Ambev.DeveloperEvaluation.Domain.csproj" />
+    <ProjectReference Include="..\Ambev.DeveloperEvaluation.Shared\Ambev.DeveloperEvaluation.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -54,13 +54,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ambev.DeveloperEvaluation.Shared", "Ambev.DeveloperEvaluation.Shared\Ambev.DeveloperEvaluation.Shared.csproj", "{28EF53F6-0F46-4A2A-B1C3-743F0ACC3365}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ambev.DeveloperEvaluation.Shared", "src\Ambev.DeveloperEvaluation.Shared\Ambev.DeveloperEvaluation.Shared.csproj", "{28EF53F6-0F46-4A2A-B1C3-743F0ACC3365}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ambev.DeveloperEvaluation.NoSqlStorage", "Ambev.DeveloperEvaluation.NoSqlStorage\Ambev.DeveloperEvaluation.NoSqlStorage.csproj", "{BFBB6D13-69F5-498F-A170-F5C17BF073D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ambev.DeveloperEvaluation.NoSqlStorage", "src\Ambev.DeveloperEvaluation.NoSqlStorage\Ambev.DeveloperEvaluation.NoSqlStorage.csproj", "{BFBB6D13-69F5-498F-A170-F5C17BF073D8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consumer", "Consumer", "{AA0F1222-059D-492E-89FF-959E7E12512C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ambev.DeveloperEvaluation.Messages", "Ambev.DeveloperEvaluation.Messages\Ambev.DeveloperEvaluation.Messages.csproj", "{3D92BB23-7361-471D-ADE8-9AFDC957E3DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ambev.DeveloperEvaluation.Messages", "src\Ambev.DeveloperEvaluation.Messages\Ambev.DeveloperEvaluation.Messages.csproj", "{3D92BB23-7361-471D-ADE8-9AFDC957E3DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
