@@ -25,7 +25,7 @@ public class CreateSaleHandlerTests
 
     public CreateSaleHandlerTests()
     {
-        var logger = Substitute.For<ILogger<CreateSaleHandler>>();
+        var logger = new LoggerFactory().CreateLogger<CreateSaleHandler>();
 
         _saleRepository = Substitute.For<ISaleRepository>();
         _mapper = Substitute.For<IMapper>();

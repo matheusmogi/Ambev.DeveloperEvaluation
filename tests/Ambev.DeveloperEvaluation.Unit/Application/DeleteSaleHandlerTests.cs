@@ -20,7 +20,7 @@ public class DeleteSaleHandlerTests
 
     public DeleteSaleHandlerTests()
     {
-        var logger = Substitute.For<ILogger<DeleteSaleHandler>>();
+        var logger = new LoggerFactory().CreateLogger<DeleteSaleHandler>();
 
         _saleRepository = Substitute.For<ISaleRepository>();
         _publisher = Substitute.For<IPublisher>();

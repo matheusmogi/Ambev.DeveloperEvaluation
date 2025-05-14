@@ -23,7 +23,7 @@ public class GetSaleHandlerTests
 
     public GetSaleHandlerTests()
     {
-        var logger = Substitute.For<ILogger<GetSaleHandler>>();
+        var logger = new LoggerFactory().CreateLogger<GetSaleHandler>();
 
         _saleRepository = Substitute.For<ISaleRepository>();
         _mapper = Substitute.For<IMapper>();

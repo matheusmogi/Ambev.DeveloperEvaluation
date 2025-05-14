@@ -14,7 +14,7 @@ public class SaleUpdatedNotificationHandlerTests
 
     public SaleUpdatedNotificationHandlerTests()
     {
-        var logger = Substitute.For<ILogger<SaleUpdatedNotificationHandler>>();
+        var logger = new LoggerFactory().CreateLogger<SaleUpdatedNotificationHandler>();
 
         _publishEndpoint = Substitute.For<IPublishEndpoint>();
         _handler = new SaleUpdatedNotificationHandler(_publishEndpoint, logger);

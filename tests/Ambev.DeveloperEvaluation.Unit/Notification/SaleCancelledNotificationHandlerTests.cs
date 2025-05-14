@@ -14,7 +14,7 @@ public class SaleCancelledNotificationHandlerTests
 
     public SaleCancelledNotificationHandlerTests()
     {
-        var logger = Substitute.For<ILogger<SaleCancelledNotificationHandler>>();
+        var logger = new LoggerFactory().CreateLogger<SaleCancelledNotificationHandler>();
 
         _publishEndpoint = Substitute.For<IPublishEndpoint>();
         _handler = new SaleCancelledNotificationHandler(_publishEndpoint, logger);
