@@ -11,10 +11,14 @@
 	</ItemGroup>
 	
 	<ItemGroup>
+	  <PackageReference Include="MassTransit.RabbitMQ" Version="8.4.0" />
+	  <PackageReference Include="MongoDB.Driver" Version="3.4.0" />
 	  <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.8" />
 	</ItemGroup>
 	
 	<ItemGroup>
+		<ProjectReference Include="..\..\Ambev.DeveloperEvaluation.Messages\Ambev.DeveloperEvaluation.Messages.csproj" />
+		<ProjectReference Include="..\..\Ambev.DeveloperEvaluation.NoSqlStorage\Ambev.DeveloperEvaluation.NoSqlStorage.csproj" />
 		<ProjectReference Include="..\Ambev.DeveloperEvaluation.Domain\Ambev.DeveloperEvaluation.Domain.csproj" />
 		<ProjectReference Include="..\Ambev.DeveloperEvaluation.Application\Ambev.DeveloperEvaluation.Application.csproj" />
 		<ProjectReference Include="..\Ambev.DeveloperEvaluation.ORM\Ambev.DeveloperEvaluation.ORM.csproj" />
