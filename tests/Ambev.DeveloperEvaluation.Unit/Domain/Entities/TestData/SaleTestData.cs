@@ -5,6 +5,19 @@ namespace Ambev.DeveloperEvaluation.Unit.Domain.Entities.TestData;
 
 internal static class SaleTestData
 {
+    public static Sale GenerateSale()
+    {
+        var saleFaker = new Faker<Sale>()
+            .RuleFor(s => s.Id, _ => Guid.NewGuid())
+            .RuleFor(s => s.SaleDate, f => f.Date.Past().ToUniversalTime())
+            .RuleFor(s => s.CreatedAt, f => f.Date.Past().ToUniversalTime())
+            .RuleFor(s => s.CustomerName, f => f.Person.FullName)
+            .RuleFor(s => s.BranchName, f => f.Company.CompanyName())
+            .RuleFor(s => s.Items, _ => [GetValidSaleItem(10)]);
+
+        return saleFaker.Generate();
+    }
+
     internal static SaleItem GetValidSaleItem(int? quantity = null)
     {
         return FakerItem(quantity).Generate();
