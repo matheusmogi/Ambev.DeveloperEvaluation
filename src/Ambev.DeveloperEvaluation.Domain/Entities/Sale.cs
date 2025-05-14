@@ -121,7 +121,7 @@ public class Sale : BaseEntity
     /// </summary>
     public void Cancel()
     {
-        Status = SaleStatus.Canceled;
+        Status = SaleStatus.Cancelled;
         UpdatedAt = DateTime.UtcNow;
     }
 

@@ -6,13 +6,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Ambev.DeveloperEvaluation.Shared\Ambev.DeveloperEvaluation.Shared.csproj" />
     <ProjectReference Include="..\Ambev.DeveloperEvaluation.Domain\Ambev.DeveloperEvaluation.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />    
+    <PackageReference Include="MassTransit.Abstractions" Version="8.4.0" />    
     <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="MongoDB.Bson" Version="3.4.0" />
     <PackageReference Include="OneOf" Version="3.0.271" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Sales\" />
   </ItemGroup>
 
 </Project>
