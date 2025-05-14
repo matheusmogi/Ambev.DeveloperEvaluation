@@ -137,7 +137,7 @@ public class Sale : BaseEntity
     /// <summary>
     /// Applies any applicable discounts to the sale items. 
     /// </summary>
-    private void ApplyDiscounts()
+    public void ApplyDiscounts()
     {
         foreach (var item in Items.GroupBy(s => s.ProductId).Select(g => g.First()))
         {
@@ -152,8 +152,8 @@ public class Sale : BaseEntity
     /// <exception cref="InvalidOperationException">Thrown when the quantity exceeds the maximum allowed for discount.</exception>
     private static void ApplyDiscount(SaleItem item)
     {
-        var strategy = SaleRebateStrategy.Strategies.FirstOrDefault(pair => pair.Key(item.Quantity)).Value ??
+        var strategy = SaleDiscountStrategy.Strategies.FirstOrDefault(pair => pair.Key(item.Quantity)).Value ??
                        throw new InvalidOperationException("Cannot sell more than 20 identical items.");
-        item.Discount = strategy.CalculateDiscount(item.Quantity, item.UnitPrice);
+        item.Discount = strategy.Calculate(item.Quantity, item.UnitPrice);
     }
 }

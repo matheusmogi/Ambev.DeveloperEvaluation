@@ -1,4 +1,4 @@
-﻿namespace Ambev.DeveloperEvaluation.Domain.Strategies.Rebate;
+﻿namespace Ambev.DeveloperEvaluation.Domain.Strategies.Discount;
 
 /// <summary>
 /// Defines a strategy for calculating discounts on sale items.
@@ -11,7 +11,7 @@ internal interface IDiscountStrategy
     /// <param name="quantity">The quantity of the product being purchased.</param>
     /// <param name="unitPrice">The unit price of the product.</param>
     /// <returns>The calculated discount amount.</returns>
-    decimal CalculateDiscount(int quantity, decimal unitPrice);
+    decimal Calculate(int quantity, decimal unitPrice);
 }
 
 
