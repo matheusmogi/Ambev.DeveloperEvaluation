@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using Ambev.DeveloperEvaluation.Shared.Pagination;
 
 namespace Ambev.DeveloperEvaluation.WebApi.Common;
 
