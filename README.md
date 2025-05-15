@@ -49,18 +49,17 @@ The system handles sales transactions, allowing for the creation, cancellation, 
 
 ## 🚀 How to Run the Project
 
-### Option 1: Using Docker Compose
-
-The project can be run entirely using `docker-compose`, which sets up RabbitMQ, MongoDB, and the application.
-
-#### 1. Clone the Repository.
+#### Clone the Repository.
 ```bash
 git clone https://github.com/tibursocampos/Ambev.DeveloperEvaluation.git
 cd Ambev.DeveloperEvaluation
 ```
+### Option 1: Using Docker Compose
 
-#### 2. Ensure `docker-compose.yml` is in the root directory.
-#### 3. Build and start the services:
+The project can be run entirely using `docker-compose`, which sets up RabbitMQ, MongoDB, Postgres, and the application.
+
+#### 1. Ensure `docker-compose.yml` is in the root directory.
+#### 2. Build and start the services:
    ```bash
    docker-compose up --build
    ```
@@ -69,10 +68,9 @@ cd Ambev.DeveloperEvaluation
 
 If you want to run the application in debug mode:
 
-Open the project in your preferred IDE.
-- Select Docker Compose as the startup option.
-- Run the application.
-- Apply the migrations as mentioned above.
+#### 1. Open the project in your preferred IDE.
+#### 2. Select Docker Compose as the startup option.
+#### 3. Run the application.
 
 ### After starting the services
 
