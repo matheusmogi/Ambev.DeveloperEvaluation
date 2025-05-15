@@ -53,12 +53,41 @@ The system handles sales transactions, allowing for the creation, cancellation, 
 
 The project can be run entirely using `docker-compose`, which sets up RabbitMQ, MongoDB, and the application.
 
-1. Ensure `docker-compose.yml` is in the root directory.
-2. Build and start the services:
+#### 1. Clone the Repository.
+```bash
+git clone https://github.com/tibursocampos/Ambev.DeveloperEvaluation.git
+cd Ambev.DeveloperEvaluation
+```
+
+#### 2. Ensure `docker-compose.yml` is in the root directory.
+#### 3. Build and start the services:
    ```bash
    docker-compose up --build
    ```
-3. Access the application at https://localhost:8082/swagger/index.html. Use Swagger to interact with the sales endpoints for creating, updating, querying, selecting, and deleting sales.
-4. It is possible to see the RabbitMQ management interface at http://127.0.0.1:15672/#/ (with the username and password set in the docker-compose file).
-5. Access MongoDB at http://localhost:27017 to check if the `sale events` are being stored by consumers observing the RabbitMQ queues (using MassTransit).
 
+### Option 2: Running in Debug Mode (Optional)
+
+If you want to run the application in debug mode:
+
+Open the project in your preferred IDE.
+- Select Docker Compose as the startup option.
+- Run the application.
+- Apply the migrations as mentioned above.
+
+### After starting the services
+
+#### 1. After starting the services, apply the migrations:
+   ```bash
+   dotnet ef database update --project src/Ambev.DeveloperEvaluation.ORM --startup-project src/Ambev.DeveloperEvaluation.WebApi --context DefaultContext --connection "Host=localhost;Port=5432;Database=developer_evaluation;Username=developer;Password=ev@luAt10n;Pooling=true;"
+   ```
+#### 2. Access the application at `https://localhost:8082/swagger/index.html`. Use Swagger to interact with the sales endpoints for creating, updating, querying, selecting, and deleting sales.
+#### 3. It is possible to see the RabbitMQ management interface at:
+```bash 
+http://127.0.0.1:15672/#/
+```
+##### Credentials for Access:
+
+- Username: developer
+- Password: ev@luAt10n
+
+#### 4. Access MongoDB at http://localhost:27017 to check if the `sale events` are being saved by consumers observing the RabbitMQ queues.
